@@ -18,6 +18,38 @@ public class MainTest {
 		String name = dd.get(1);
 		System.out.println(name);
 		
+		//제너릭을 통한 객체 타입생성
+		ArrayList<BoardVo> alist = new ArrayList<BoardVo>();
+		
+		BoardVo bv = new BoardVo(); //BoardVo 객체를 생성한다
+		
+		bv.setSubjet("게시판 제목입니다.");
+		bv.setContents("게시판 내용입니다.");
+		bv.setBidx(1);
+		
+		BoardVo bv2 = new BoardVo(); // BoardVo 객체 두번째 생성
+		
+		bv2.setSubjet("게시판 두번째 제목입니다.");
+		bv2.setContents("게시판 두번째 내용입니다.");
+		bv2.setBidx(2);
+		
+		alist.add(bv);
+		alist.add(bv2);
+		
+		
+		
+		System.out.println("alist에 담긴것은?"+alist);
+		
+		System.out.println("alist에 담긴두번째 객체가 가지고 있는 제목은?"+alist.get(1).getSubjet());
+		
+		String aa = "안녕";
+		String bb = "하세요";
+		String cc = aa+bb;
+		
+		System.out.println("cc값은 뭘까요"+cc); //연결하는 것이 아닌 새로운 객체를 만듬
+		
+		// Buffer Builder
+		
 
 	}
 	public static int a() throws Exception {
